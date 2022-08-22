@@ -79,7 +79,11 @@ switch(answer){
     case "29":
         //  Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
         Console.WriteLine("Вы выбрали 29 задачу");
-        int [] numbers = new int[8];
+        Console.WriteLine("Введите размер массива");
+        string numberTo29 = Convert.ToString(Console.ReadLine());
+        if(itISIntMumber(numberTo29))
+        {
+        int [] numbers = new int[Convert.ToInt32(numberTo29)];
         Console.Write("[");
         for (int i = 0; i < numbers.Length; i++)
         {
@@ -92,6 +96,11 @@ switch(answer){
             {
                 Console.WriteLine(numbers[i] + "]");
             }
+        }
+        }
+        else
+        {
+            Console.WriteLine("Попробуйте еще раз");
         }
         break;
     
